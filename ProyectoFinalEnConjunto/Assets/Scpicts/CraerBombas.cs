@@ -22,6 +22,6 @@ public class CrearBombas : MonoBehaviour
 
         GameObject enemy = Instantiate(prefabEnemy, position, transform.rotation);
 
-        Invoke("Createenemy", 1.0f);
+        Invoke("Createenemy", 5.0f);
     }
 }

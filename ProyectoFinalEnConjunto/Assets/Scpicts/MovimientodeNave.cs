@@ -22,9 +22,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     }
     private void Awake()
     {
-        GameObject enemy = Instantiate(prefabBullet,position, transform.rotation);
 
-        Invoke("Createenemy", 1.0f);
     }
     private void FixedUpdate()
     {
