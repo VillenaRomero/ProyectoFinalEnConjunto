@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bulletenemiga : MonoBehaviour
 {
     private Rigidbody rigibody;
-    public float speedx;
+    public float speedz;
     void Start()
     {
 
@@ -22,7 +22,7 @@ public class Bulletenemiga : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rigibody.velocity = new Vector3(-speedx, 0, 0);
+        rigibody.velocity = new Vector3(0, 0, -speedz);
     }
     public void OnCollisionStay(Collision collision)
     {

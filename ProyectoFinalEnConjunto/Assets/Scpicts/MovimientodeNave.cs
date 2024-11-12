@@ -9,7 +9,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     public int life = 3;
     private Rigidbody rigibody;
     public GameObject prefabBullet;
-    public float speedx;
+    public float speedz;
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
@@ -26,7 +26,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rigibody.velocity = new Vector3(-speedx, 0, 0);
+        rigibody.velocity = new Vector3(0,0,-speedz);
     }
     public void OnCollisionStay(Collision collision)
     {

@@ -25,7 +25,7 @@ public class movimientodeNave : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.KeypadEnter))
+        if (Input.GetKeyDown(KeyCode.Z))
         {
             GameObject bullet = Instantiate(bulletprefab);
             bullet.transform.position = spawner.position;
