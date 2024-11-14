@@ -9,6 +9,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     public int life = 3;
     private Rigidbody rigibody;
     public GameObject prefabBullet;
+    public Transform spawner;
     public float speedz;
     void Start()
     {
@@ -23,6 +24,12 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     private void Awake()
     {
 
+    }
+    void CrearBalaenemiga() {
+        GameObject bullet = Instantiate(prefabBullet);
+        bullet.transform.position = spawner.position;
+        bullet.transform.rotation = transform.rotation;
+        Invoke("Createenemy", 0.3f);
     }
     private void FixedUpdate()
     {

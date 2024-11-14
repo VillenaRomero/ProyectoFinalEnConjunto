@@ -7,7 +7,9 @@ public class CrearNaves : MonoBehaviour
     public GameObject prefabEnemy;
     public float minYposition;
     public float maxYposition;
-    public float xPosition;
+    public float minXposition;
+    public float maxXposition;
+    public float zPosition;
 
     private void Start()
     {
@@ -18,10 +20,12 @@ public class CrearNaves : MonoBehaviour
     {
         float yPosition = Random.Range(minYposition, maxYposition);
 
+        float xPosition = Random.Range(minXposition, maxXposition);
+
         Vector3 position = new Vector3(xPosition, yPosition, 0);
 
         GameObject enemy = Instantiate(prefabEnemy, position, transform.rotation);
 
-        Invoke("Createenemy", 3.0f);
+        Invoke("Createenemy", 1.0f);
     }
 }
