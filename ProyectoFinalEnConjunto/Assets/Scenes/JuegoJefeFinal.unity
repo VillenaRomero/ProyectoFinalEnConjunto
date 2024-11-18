@@ -278,12 +278,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 85e48f07004b47c45aae194a4d0cda15,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21619.8
+      value: -21874
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e48f07004b47c45aae194a4d0cda15,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 204
+      value: 398
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 85e48f07004b47c45aae194a4d0cda15,
         type: 3}
@@ -3234,6 +3234,9 @@ MonoBehaviour:
   spawner3: {fileID: 1433417982}
   spawner4: {fileID: 1596656123}
   Spawnermisil: {fileID: 1910385738}
+  speed: 0
+  xDirection: 1
+  yDirection: 1
 --- !u!4 &1833391600
 Transform:
   m_ObjectHideFlags: 0

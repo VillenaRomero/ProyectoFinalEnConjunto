@@ -14,6 +14,10 @@ public class Navejefefinal : MonoBehaviour
     public Transform spawner3;
     public Transform spawner4;
     public Transform Spawnermisil;
+    public float speed;
+    public float xDirection = 1;
+    public float yDirection = 1;
+    private Transform comTransform;
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
@@ -21,13 +25,35 @@ public class Navejefefinal : MonoBehaviour
         InvokeRepeating("ShootBullet2", 0f, 5f);
         InvokeRepeating("ShootBullet3", 0f, 5f);
         InvokeRepeating("ShootBullet4", 0f, 5f);
-        
+        comTransform = GetComponent<Transform>();
+
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-       
+        comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime,comTransform.position.y + speed * yDirection * Time.deltaTime);
+
+        // Limites en x
+        if (comTransform.position.x >= 8.3f)
+        {
+            xDirection = -1;
+        }
+        else if (comTransform.position.x <= -8.2f)
+        {
+            xDirection = 1;
+        }
+
+        // Limites en y
+        if (comTransform.position.y >= 4.5f)
+        {
+            yDirection = -1;
+        }
+        else if (comTransform.position.y <= -4.4f)
+        {
+            yDirection = 1;
+        }
     }
+
     private void ShootBullet1() {
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner1.position;

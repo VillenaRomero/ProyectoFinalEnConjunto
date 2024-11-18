@@ -184,7 +184,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 61.78
+  field of view: 60.000004
   orthographic: 0
   orthographic size: 10
   m_Depth: -1
@@ -210,8 +210,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62180555}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009707524, y: -0.0000000018785473, z: -1.8236905e-11, w: 0.9999529}
-  m_LocalPosition: {x: 4363, y: 468.6, z: 6691}
+  m_LocalRotation: {x: 0.36419493, y: -0.5494722, z: 0.28811154, w: 0.69457483}
+  m_LocalPosition: {x: 4409.09, y: 527.1, z: 6780.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -366,7 +366,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66337372}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.009707514, y: -0.0000000016314591, z: -1.5838159e-11, w: 0.9999529}
+  m_LocalRotation: {x: -0.009707509, y: 2.4746596e-10, z: 2.4023923e-12, w: 0.9999529}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1058,7 +1058,7 @@ MonoBehaviour:
   m_XAxis:
     Value: 0
     m_SpeedMode: 0
-    m_MaxSpeed: 300
+    m_MaxSpeed: 10
     m_AccelTime: 0.1
     m_DecelTime: 0.1
     m_InputAxisName: Mouse X
@@ -1302,7 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 30
-  speed: 150
+  speed: 200
 --- !u!1 &1546928870
 GameObject:
   m_ObjectHideFlags: 3
@@ -1621,7 +1621,12 @@ PrefabInstance:
     - target: {fileID: 8875887032192418715, guid: 85e48f07004b47c45aae194a4d0cda15,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -57.9
+      value: -101.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8875887032192418715, guid: 85e48f07004b47c45aae194a4d0cda15,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4224
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

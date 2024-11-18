@@ -25,7 +25,7 @@ public class moviientodepersonaje : MonoBehaviour
     {
         if (collision.gameObject.tag == "Misiles") {
             
-            life = life - 5;
+            life = life - 3;
             
             if (life == 0)
             {
@@ -34,6 +34,10 @@ public class moviientodepersonaje : MonoBehaviour
         }
         if (collision.gameObject.tag == "nave")
         {
+            SceneManager.LoadScene("JuegoJefeFinal");
+        }
+        if (collision.gameObject.tag == "nave") {
+
             SceneManager.LoadScene("JuegoJefeFinal");
         }
     }
