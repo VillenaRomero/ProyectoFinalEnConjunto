@@ -17,57 +17,49 @@ public class Navejefefinal : MonoBehaviour
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
+        InvokeRepeating("ShootBullet1", 0f, 5f);
+        InvokeRepeating("ShootBullet2", 0f, 5f);
+        InvokeRepeating("ShootBullet3", 0f, 5f);
+        InvokeRepeating("ShootBullet4", 0f, 5f);
+        
     }
-
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-
+       
     }
-    private void Awake()
-    {
-        CrearBalalsenemigas();
-        CraerMisilEnemigo();
-
-
-    }
-    void CrearBalalsenemigas() { 
+    private void ShootBullet1() {
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner1.position;
-        bullet.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 0.5f);
-        GameObject bullet1 = Instantiate(prefabBullet);
+        bullet.transform.rotation = transform.rotation;  
+    }
+    private void ShootBullet2()
+    {
+        GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner2.position;
         bullet.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 0.5f);
-        GameObject bullet2 = Instantiate(prefabBullet);
+    }
+    private void ShootBullet3()
+    {
+        GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner3.position;
         bullet.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 0.5f);
-        GameObject bullet3 = Instantiate(prefabBullet);
+    }
+    private void ShootBullet4()
+    {
+        GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner4.position;
         bullet.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 0.5f);
-    }
-    void CraerMisilEnemigo() { 
-        GameObject misil = Instantiate(prefabBullet);
-        misil.transform.position = Spawnermisil.position;
-        misil.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 5.0f);
-    }
-    private void FixedUpdate()
-    {
-
     }
     public void OnCollisionStay(Collision collision)
     {
         if (collision.gameObject.tag == "baladeljugador")
         {
-            life = life - 1;
-            if (life == 0)
-            {
-                Destroy(this.gameObject);
-            }
+        life = life - 1;
+         if (life == 0)
+         {
+          Destroy(this.gameObject);
+         }
         }
         /*if (collision.gameObject.tag== "misildeljugador"){
          life = life - 10;

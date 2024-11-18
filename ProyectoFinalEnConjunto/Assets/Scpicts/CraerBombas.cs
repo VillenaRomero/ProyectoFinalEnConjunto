@@ -7,6 +7,8 @@ public class CrearBombas : MonoBehaviour
     public GameObject prefabEnemy;
     public float minZposition;
     public float maxZposition;
+    public float minXposition;
+    public float maxXposition;
     public float yPosition;
 
     private void Awake()
@@ -18,7 +20,9 @@ public class CrearBombas : MonoBehaviour
     {
         float zPosition = Random.Range(minZposition, maxZposition);
 
-        Vector3 position = new Vector3(0f, yPosition, zPosition);
+        float xPosition = Random.Range(minXposition, maxXposition);
+
+        Vector3 position = new Vector3(xPosition, yPosition, zPosition);
 
         GameObject enemy = Instantiate(prefabEnemy, position, transform.rotation);
 

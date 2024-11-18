@@ -8,7 +8,7 @@ public class Misiles : MonoBehaviour
     public float speedy;
     void Start()
     {
-       rigibody = GetComponent<Rigidbody>();
+               rigibody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -18,7 +18,7 @@ public class Misiles : MonoBehaviour
     }
     private void Awake()
     {
-        
+
     }
     private void FixedUpdate()
     {

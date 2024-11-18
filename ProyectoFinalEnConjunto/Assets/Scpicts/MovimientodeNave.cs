@@ -14,6 +14,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
+        InvokeRepeating("ShootBullet1", 0f, 5f);
     }
 
     // Update is called once per frame
@@ -25,11 +26,11 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     {
 
     }
-    void CrearBalaenemiga() {
+    private void ShootBullet1()
+    {
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner.position;
         bullet.transform.rotation = transform.rotation;
-        Invoke("Createenemy", 0.3f);
     }
     private void FixedUpdate()
     {
@@ -48,7 +49,6 @@ public class MovimientodeNaveenemiga : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Destroy(this.gameObject);
-
         }
     }
 }
