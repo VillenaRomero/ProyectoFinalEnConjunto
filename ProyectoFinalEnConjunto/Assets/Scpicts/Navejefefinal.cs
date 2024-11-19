@@ -26,9 +26,7 @@ public class Navejefefinal : MonoBehaviour
         InvokeRepeating("ShootBullet2", 0f, 8f);
         InvokeRepeating("ShootBullet3", 0f, 8f);
         InvokeRepeating("ShootBullet4", 0f, 8f);
-        InvokeRepeating("ShootMisil" , 0F , 30F);
-        
-
+        InvokeRepeating("ShootMisil", 0F, 30F); 
     }
     // Update is called once per frame
     void FixedUpdate()
@@ -36,21 +34,21 @@ public class Navejefefinal : MonoBehaviour
         comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime,comTransform.position.y + speed * yDirection * Time.deltaTime);
 
         // Limites en x
-        if (comTransform.position.x >= 8.3f)
+        if (comTransform.position.x >= -20988.0f)
         {
             xDirection = -1;
         }
-        else if (comTransform.position.x <= -8.2f)
+        else if (comTransform.position.x <= -22280.0f)
         {
             xDirection = 1;
         }
 
         // Limites en y
-        if (comTransform.position.y >= 4.5f)
+        if (comTransform.position.y >= 728.0f)
         {
             yDirection = -1;
         }
-        else if (comTransform.position.y <= -4.4f)
+        else if (comTransform.position.y <= -8.0f)
         {
             yDirection = 1;
         }
@@ -88,17 +86,17 @@ public class Navejefefinal : MonoBehaviour
     {
         if (collision.gameObject.tag == "baladeljugador")
         {
-        life = life - 1;
-         if (life == 0)
-         {
-          Destroy(this.gameObject);
-         }
+            life = life - 1;
+            if (life == 0)
+            {
+             Destroy(this.gameObject);
+            }
         }
         /*if (collision.gameObject.tag== "misildeljugador"){
          life = life - 10;
 
          }
-         
+ 
          */
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     private Rigidbody rigibody;
-    public float speedz;
+    public Vector3 direction;
     void Start()
     {
 
@@ -22,7 +22,7 @@ public class Bala : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        rigibody.velocity = new Vector3(0,0,speedz);
+        rigibody.velocity = direction;
     }
     public void OnCollisionStay(Collision collision)
     {

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0029157791, g: 0.004566175, b: 0.0248481, a: 1}
+  m_IndirectSpecularColor: {r: 0.002915797, g: 0.0045662103, b: 0.024848215, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3246,7 +3246,7 @@ Transform:
   m_GameObject: {fileID: 1833391598}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21633, y: 369, z: 243}
+  m_LocalPosition: {x: -20988, y: 376, z: 243}
   m_LocalScale: {x: 0.90905285, y: 0.90905285, z: 0.90905285}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4324,6 +4324,12 @@ PrefabInstance:
       propertyPath: spawner
       value: 
       objectReference: {fileID: 1335428465}
+    - target: {fileID: 8904428010550529331, guid: ca22583b97cc79f42b7a2aa4bee72907,
+        type: 3}
+      propertyPath: prefabBullet
+      value: 
+      objectReference: {fileID: 4993982438606209231, guid: 3dff49a5fae82ca4db8558ba63299a85,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

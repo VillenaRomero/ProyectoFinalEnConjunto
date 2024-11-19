@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   life: 3
-  prefabBullet: {fileID: 4993982438606209231, guid: dcb52795f77786249b33a73f4112f19b,
+  prefabBullet: {fileID: 4993982438606209231, guid: 3dff49a5fae82ca4db8558ba63299a85,
     type: 3}
   spawner: {fileID: 2754994162419020304}
   speedz: 20
