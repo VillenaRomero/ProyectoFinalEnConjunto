@@ -21,11 +21,13 @@ public class Navejefefinal : MonoBehaviour
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
-        InvokeRepeating("ShootBullet1", 0f, 5f);
-        InvokeRepeating("ShootBullet2", 0f, 5f);
-        InvokeRepeating("ShootBullet3", 0f, 5f);
-        InvokeRepeating("ShootBullet4", 0f, 5f);
         comTransform = GetComponent<Transform>();
+        InvokeRepeating("ShootBullet1", 0f, 8f);
+        InvokeRepeating("ShootBullet2", 0f, 8f);
+        InvokeRepeating("ShootBullet3", 0f, 8f);
+        InvokeRepeating("ShootBullet4", 0f, 8f);
+        InvokeRepeating("ShootMisil" , 0F , 30F);
+        
 
     }
     // Update is called once per frame
@@ -76,6 +78,11 @@ public class Navejefefinal : MonoBehaviour
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner4.position;
         bullet.transform.rotation = transform.rotation;
+    }
+    private void ShootMisil() {
+        GameObject misil = Instantiate(PrefabMisiles);
+        misil.transform.position = Spawnermisil.position;
+        misil.transform.rotation = transform.rotation;
     }
     public void OnCollisionStay(Collision collision)
     {
