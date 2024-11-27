@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7826578808508248243}
   - component: {fileID: 1123390240622144980}
-  - component: {fileID: 5498448277365335745}
   - component: {fileID: 882420455436334088}
   m_Layer: 0
   m_Name: Misil
@@ -56,19 +55,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 216.2, y: 154.14, z: 50.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5498448277365335745
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7309266875571026207}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 901061d4cb6775f4fa1f471dafb94b58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speedy: 4
 --- !u!54 &882420455436334088
 Rigidbody:
   m_ObjectHideFlags: 0

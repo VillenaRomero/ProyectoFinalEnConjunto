@@ -18,46 +18,59 @@ public class Navejefefinal : MonoBehaviour
     public float xDirection = 1;
     public float yDirection = 1;
     private Transform comTransform;
+
+    public float timeTiCreate = 5;
+    public float currentTimetuCreate;
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
         comTransform = GetComponent<Transform>();
-        InvokeRepeating("ShootBullet1", 0f, 8f);
-        InvokeRepeating("ShootBullet2", 0f, 8f);
-        InvokeRepeating("ShootBullet3", 0f, 8f);
-        InvokeRepeating("ShootBullet4", 0f, 8f);
-        InvokeRepeating("ShootMisil", 0F, 30F); 
+    }
+    private void Update()
+    {
+        currentTimetuCreate = currentTimetuCreate + Time.deltaTime;
+        if (currentTimetuCreate >= timeTiCreate)
+        {
+            ShootBullet1();
+            ShootBullet2();
+            ShootBullet3();
+            ShootBullet4();
+
+            currentTimetuCreate = 0;
+        }
+
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime,comTransform.position.y + speed * yDirection * Time.deltaTime);
+        comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime, comTransform.position.y + speed * yDirection * Time.deltaTime);
 
         // Limites en x
-        if (comTransform.position.x >= -20988.0f)
+        if (comTransform.position.x >= 8.3f)
         {
             xDirection = -1;
         }
-        else if (comTransform.position.x <= -22280.0f)
+        else if (comTransform.position.x <= -8.2f)
         {
             xDirection = 1;
         }
 
         // Limites en y
-        if (comTransform.position.y >= 728.0f)
+        if (comTransform.position.y >= 4.5f)
         {
             yDirection = -1;
         }
-        else if (comTransform.position.y <= -8.0f)
+        else if (comTransform.position.y <= -4.4f)
         {
             yDirection = 1;
         }
     }
 
-    private void ShootBullet1() {
+    private void ShootBullet1()
+    {
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner1.position;
-        bullet.transform.rotation = transform.rotation;  
+        bullet.transform.rotation = transform.rotation;
     }
     private void ShootBullet2()
     {
@@ -77,7 +90,8 @@ public class Navejefefinal : MonoBehaviour
         bullet.transform.position = spawner4.position;
         bullet.transform.rotation = transform.rotation;
     }
-    private void ShootMisil() {
+    private void ShootMisil()
+    {
         GameObject misil = Instantiate(PrefabMisiles);
         misil.transform.position = Spawnermisil.position;
         misil.transform.rotation = transform.rotation;
@@ -89,14 +103,15 @@ public class Navejefefinal : MonoBehaviour
             life = life - 1;
             if (life == 0)
             {
-             Destroy(this.gameObject);
+                Destroy(this.gameObject);
             }
         }
         /*if (collision.gameObject.tag== "misildeljugador"){
          life = life - 10;
 
          }
- 
+         
          */
     }
+
 }

@@ -5,27 +5,31 @@ using UnityEngine;
 public class CrearNaves : MonoBehaviour
 {
     public GameObject prefabEnemy;
-    public float minYposition;
-    public float maxYposition;
+    public float minZposition;
+    public float maxZposition;
     public float minXposition;
     public float maxXposition;
-    public float zPosition;
+    public float minYposition;
+    public float maxYposition;
 
-    private void Start()
+    private void Awake()
     {
         Createenemy();
     }
 
     void Createenemy()
     {
-        float yPosition = Random.Range(minYposition, maxYposition);
+        float zPosition = Random.Range(minZposition, maxZposition);
 
         float xPosition = Random.Range(minXposition, maxXposition);
 
-        Vector3 position = new Vector3(xPosition, yPosition, 0);
+        float yPosition = Random.Range(minYposition, maxYposition);
+
+        Vector3 position = new Vector3(xPosition, yPosition, zPosition);
 
         GameObject enemy = Instantiate(prefabEnemy, position, transform.rotation);
 
-        Invoke("Createenemy", 1.0f);
+        Invoke("Createenemy", 5.0f);
     }
+
 }
