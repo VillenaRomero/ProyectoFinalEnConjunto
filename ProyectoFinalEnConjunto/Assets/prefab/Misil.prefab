@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 3301819344443953211}
   - component: {fileID: 6685807408916747565}
   m_Layer: 0
-  m_Name: misil
-  m_TagString: Untagged
+  m_Name: Misil
+  m_TagString: Misiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,5 +146,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: {x: 0, y: -100, z: 0}
-  nametag: 
+  speedz: {x: 0, y: -200, z: 0}
+  nametag: Vacio
