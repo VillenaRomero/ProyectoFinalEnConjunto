@@ -9,19 +9,35 @@ public class moviientodepersonaje : MonoBehaviour
     public int life = 30;
     private Rigidbody rb;
     public float speed = 100f;
+    public Vector2 sensitivity;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
+    private void Update()
+    {
+        UpdateCamera();
+    }
+    private void UpdateCamera() {
+        float hor = Input.GetAxis("Mouse X");
+        float ver = Input.GetAxis("Mouse Y");
 
+        if (hor != 0) {
+            transform.Rotate(0,hor * sensitivity.x, 0);
+        }
+        if (ver != 0)
+        {
+            transform.Rotate(ver * sensitivity.y,0, 0);
+        }
+    }
     public void ReadDirection(InputAction.CallbackContext context)
     {
         Vector2 direction = context.ReadValue<Vector2>();
 
         rb.velocity = new Vector3(direction.x * speed, 0f, direction.y * speed);
     }
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Misiles") {
             
@@ -34,10 +50,6 @@ public class moviientodepersonaje : MonoBehaviour
         }
         if (collision.gameObject.tag == "nave")
         {
-            SceneManager.LoadScene("JuegoJefeFinal");
-        }
-        if (collision.gameObject.tag == "nave") {
-
             SceneManager.LoadScene("JuegoJefeFinal");
         }
     }
