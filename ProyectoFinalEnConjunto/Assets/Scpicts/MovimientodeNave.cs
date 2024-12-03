@@ -46,7 +46,7 @@ public class MovimientodeNaveenemiga : MonoBehaviour
                 Destroy(this.gameObject);
             }
         }
-        if (collision.gameObject.tag == "player")
+        if (collision.gameObject.tag == "nave")
         {
             Destroy(this.gameObject);
         }

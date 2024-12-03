@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3153106003696445767}
   - component: {fileID: 584874442956968992}
   - component: {fileID: 4855540524470484756}
-  - component: {fileID: 2585316528814878505}
+  - component: {fileID: 4392674778273285192}
   m_Layer: 0
   m_Name: BaladenaveGigante
   m_TagString: Balasenemigas
@@ -156,7 +156,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2585316528814878505
+--- !u!114 &4392674778273285192
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -165,7 +165,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4993982438606209231}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3313d07290e29374f8bdaf52c9fcec14, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: 100
+  speedz: {x: 0, y: 0, z: 0}
+  nametag: nave

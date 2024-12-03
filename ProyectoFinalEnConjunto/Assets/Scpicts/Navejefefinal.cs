@@ -41,7 +41,7 @@ public class Navejefefinal : MonoBehaviour
 
     }
     // Update is called once per frame
-    /*void FixedUpdate()
+    void FixedUpdate()
     {
         comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime, comTransform.position.y + speed * yDirection * Time.deltaTime);
 
@@ -64,7 +64,7 @@ public class Navejefefinal : MonoBehaviour
         {
             yDirection = 1;
         }
-    }*/
+    }
 
     private void ShootBullet1()
     {

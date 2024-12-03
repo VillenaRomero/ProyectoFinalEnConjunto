@@ -39,7 +39,7 @@ public class movimientodeNave : MonoBehaviour
 
             life = life - 5;
 
-            if (life == 0)
+            if (life < 0)
             {
                 SceneManager.LoadScene("derrota");
             }
@@ -47,9 +47,9 @@ public class movimientodeNave : MonoBehaviour
         if (collision.gameObject.tag == "Balasenemigas")
         {
 
-            life = life - 5;
+            life = life - 1;
 
-            if (life == 0)
+            if (life < 0)
             {
                 SceneManager.LoadScene("derrota");
             }
@@ -57,9 +57,9 @@ public class movimientodeNave : MonoBehaviour
         if (collision.gameObject.tag == "NaveEnemiga")
         {
 
-            life = life - 5;
+            life = life - 1;
 
-            if (life == 0)
+            if (life < 0)
             {
                 SceneManager.LoadScene("derrota");
             }

@@ -9,6 +9,8 @@ TagManager:
   - player
   - Balasenemigas
   - Vacio
+  - bala
+  - enemigo
   layers:
   - Default
   - TransparentFX
