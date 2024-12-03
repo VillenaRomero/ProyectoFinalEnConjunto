@@ -43,7 +43,7 @@ public class moviientodepersonaje : MonoBehaviour
             
             life = life - 3;
             
-            if (life == 0)
+            if (life < 0)
             {
                 SceneManager.LoadScene("derrota");
             }

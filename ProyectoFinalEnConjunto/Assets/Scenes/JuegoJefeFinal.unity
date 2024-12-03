@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027353282, g: 0.004356442, b: 0.035101265, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027353407, g: 0.0043564686, b: 0.035101447, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -186,7 +186,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &149510785
 BoxCollider:
@@ -275,6 +275,59 @@ Transform:
   - {fileID: 2045069622}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!1 &325186075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325186077}
+  - component: {fileID: 325186076}
+  m_Layer: 0
+  m_Name: Vacio (1)
+  m_TagString: Vacio
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &325186076
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325186075}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4334.37, y: 7463, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &325186077
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325186075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -21509.23, y: 187.32977, z: 2004}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &771259976
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,7 +481,7 @@ GameObject:
   - component: {fileID: 880561313}
   m_Layer: 0
   m_Name: jefefinal
-  m_TagString: Untagged
+  m_TagString: enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +545,7 @@ Transform:
   m_GameObject: {fileID: 880561309}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4973898, y: -0.5025968, z: -0.5025967, w: 0.49738976}
-  m_LocalPosition: {x: -21603, y: 196, z: 430}
+  m_LocalPosition: {x: -21617, y: 282, z: 559}
   m_LocalScale: {x: 0.20635505, y: 0.20635505, z: 0.20635505}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -525,8 +578,8 @@ MonoBehaviour:
   spawner4: {fileID: 1596656123}
   Spawnermisil: {fileID: 0}
   speed: 30
-  xDirection: 1
-  yDirection: 1
+  xDirection: 5
+  yDirection: 5
   timeTiCreate: 10
   currentTimetuCreate: 0
 --- !u!54 &880561314
@@ -1115,8 +1168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemy: {fileID: 1225181535845473846, guid: b91418e5f0824624d90721034c9f8767,
     type: 3}
-  minZposition: 360
-  maxZposition: 360
+  minZposition: -200
+  maxZposition: -200
   minXposition: -22232
   maxXposition: -20953
   minYposition: -73
@@ -1343,7 +1396,7 @@ Transform:
   m_GameObject: {fileID: 2055999661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21509.23, y: 187.32977, z: -1248}
+  m_LocalPosition: {x: -21509.23, y: 187.32977, z: -1891}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1549,10 +1602,20 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 329026837216574696, guid: b91418e5f0824624d90721034c9f8767,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 1225181535845473846, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: m_Name
       value: avion de enemigo
+      objectReference: {fileID: 0}
+    - target: {fileID: 1225181535845473846, guid: b91418e5f0824624d90721034c9f8767,
+        type: 3}
+      propertyPath: m_TagString
+      value: enemigo
       objectReference: {fileID: 0}
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
@@ -1567,7 +1630,7 @@ PrefabInstance:
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -298.1
+      value: -296
       objectReference: {fileID: 0}
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
@@ -1622,6 +1685,7 @@ SceneRoots:
   - {fileID: 2034088652}
   - {fileID: 6821822899145935609}
   - {fileID: 2055999663}
+  - {fileID: 325186077}
   - {fileID: 1630301594}
   - {fileID: 7120317954096108768}
   - {fileID: 1699456801}

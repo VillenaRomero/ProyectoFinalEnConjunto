@@ -36,17 +36,22 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     {
         rigibody.velocity = new Vector3(0,0,-speedz);
     }
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "bala")
         {
             life = life - 1;
-            if (life == 0)
+
+            if (life < 0)
             {
                 Destroy(this.gameObject);
             }
         }
         if (collision.gameObject.tag == "nave")
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "vacio")
         {
             Destroy(this.gameObject);
         }

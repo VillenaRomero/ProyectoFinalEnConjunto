@@ -15,9 +15,13 @@ public class Bala : MonoBehaviour
     {
         rigibody.velocity = speedz;
     }
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == nametag)
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == "vacio")
         {
             Destroy(this.gameObject);
         }

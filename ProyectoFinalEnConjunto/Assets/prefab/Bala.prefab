@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 4855540524470484756}
   m_Layer: 0
   m_Name: Bala
-  m_TagString: bala
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: {x: 0, y: 0, z: 0}
+  speedz: {x: 0, y: 0, z: 40}
   nametag: enemigo
 --- !u!54 &584874442956968992
 Rigidbody:

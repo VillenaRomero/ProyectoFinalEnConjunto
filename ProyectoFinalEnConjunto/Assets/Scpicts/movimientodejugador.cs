@@ -32,7 +32,7 @@ public class movimientodeNave : MonoBehaviour
             bullet.transform.rotation = transform.rotation;
         }
     }
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Misiles")
         {

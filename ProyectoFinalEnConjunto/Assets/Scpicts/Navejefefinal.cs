@@ -43,24 +43,24 @@ public class Navejefefinal : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime, comTransform.position.y + speed * yDirection * Time.deltaTime);
+        comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime, comTransform.position.y + speed * yDirection * Time.deltaTime, 559.0f);
 
-        // Limites en x
-        if (comTransform.position.x >= 8.3f)
+         
+        if (comTransform.position.x >= -21019)
         {
             xDirection = -1;
         }
-        else if (comTransform.position.x <= -8.2f)
+        else if (comTransform.position.x <= -22399)
         {
             xDirection = 1;
         }
 
         // Limites en y
-        if (comTransform.position.y >= 4.5f)
+        if (comTransform.position.y >= 555)
         {
             yDirection = -1;
         }
-        else if (comTransform.position.y <= -4.4f)
+        else if (comTransform.position.y <= -128)
         {
             yDirection = 1;
         }
@@ -96,15 +96,20 @@ public class Navejefefinal : MonoBehaviour
         misil.transform.position = Spawnermisil.position;
         misil.transform.rotation = transform.rotation;
     }
-    public void OnCollisionStay(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "baladeljugador")
+        if (collision.gameObject.tag == "bala")
         {
             life = life - 1;
-            if (life == 0)
+
+            if (life < 0)
             {
                 Destroy(this.gameObject);
             }
+        }
+        if (collision.gameObject.tag == "vacio")
+        {
+            Destroy(this.gameObject);
         }
         /*if (collision.gameObject.tag== "misildeljugador"){
          life = life - 10;
