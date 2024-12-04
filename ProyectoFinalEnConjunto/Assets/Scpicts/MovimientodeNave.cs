@@ -38,22 +38,24 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "bala")
+        if (collision.gameObject.CompareTag("Bala"))
         {
-            life = life - 1;
+            life -= 1;
 
             if (life < 0)
             {
-                Destroy(this.gameObject);
+                Destroy(gameObject);
             }
         }
-        if (collision.gameObject.tag == "nave")
+
+        if (collision.gameObject.CompareTag("nave"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
-        if (collision.gameObject.tag == "vacio")
+
+        if (collision.gameObject.CompareTag("vacio"))
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 }

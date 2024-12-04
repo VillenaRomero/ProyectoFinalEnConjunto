@@ -98,7 +98,7 @@ public class Navejefefinal : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "bala")
+        if (collision.gameObject.tag == "Bala")
         {
             life = life - 1;
 
