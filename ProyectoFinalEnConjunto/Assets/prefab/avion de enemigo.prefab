@@ -112,7 +112,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 118
   m_CollisionDetection: 0
 --- !u!65 &2149953661857365829
 BoxCollider:
@@ -151,7 +151,9 @@ MonoBehaviour:
   prefabBullet: {fileID: 4993982438606209231, guid: 3dff49a5fae82ca4db8558ba63299a85,
     type: 3}
   spawner: {fileID: 2754994162419020304}
-  speedz: 30
+  speedz: 40
+  timeTiCreate: 3
+  currentTimetuCreate: 0
 --- !u!1 &5902482552665744552
 GameObject:
   m_ObjectHideFlags: 0

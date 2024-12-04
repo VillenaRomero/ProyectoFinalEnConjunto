@@ -11,20 +11,24 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     public GameObject prefabBullet;
     public Transform spawner;
     public float speedz;
+
+    public float timeTiCreate = 5;
+    public float currentTimetuCreate;
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
-        InvokeRepeating("ShootBullet1", 0f, 5f);
     }
 
     // Update is called once per frame
     void Update()
     {
+        currentTimetuCreate = currentTimetuCreate + Time.deltaTime;
+        if (currentTimetuCreate >= timeTiCreate)
+        {
+            ShootBullet1();
 
-    }
-    private void Awake()
-    {
-
+            currentTimetuCreate = 0;
+        }
     }
     private void ShootBullet1()
     {
@@ -38,22 +42,21 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     }
     public void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Bala"))
+        if (collision.gameObject.tag == "Bala")
         {
-            life -= 1;
-
+            life--;
             if (life < 0)
             {
-                Destroy(gameObject);
+                Destroy(this.gameObject);
             }
         }
 
-        if (collision.gameObject.CompareTag("nave"))
+        if (collision.gameObject.tag == "nave")
         {
             Destroy(gameObject);
         }
 
-        if (collision.gameObject.CompareTag("vacio"))
+        if (collision.gameObject.tag == "vacio")
         {
             Destroy(gameObject);
         }

@@ -8,11 +8,11 @@ TagManager:
   - Misiles
   - player
   - Balasenemigas
-  - Vacio
   - enemigo
   - baladeljugador
   - Undefined
   - Bala
+  - vacio
   layers:
   - Default
   - TransparentFX

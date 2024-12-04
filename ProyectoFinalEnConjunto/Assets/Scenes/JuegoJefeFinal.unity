@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027353282, g: 0.004356442, b: 0.035101265, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027353407, g: 0.0043564686, b: 0.035101447, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -207,7 +207,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 307.1, y: 303.54, z: 133}
+  m_Size: {x: 307.1, y: 300.84, z: 61.4}
   m_Center: {x: 105.51, y: 0.2911225, z: 5.456244}
 --- !u!23 &149510786
 MeshRenderer:
@@ -287,7 +287,7 @@ GameObject:
   - component: {fileID: 325186076}
   m_Layer: 0
   m_Name: Vacio (1)
-  m_TagString: Vacio
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14925a92b4ccc054280cc982bf626d59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 100
+  life: 500
   prefabBullet: {fileID: 4993982438606209231, guid: dcb52795f77786249b33a73f4112f19b,
     type: 3}
   PrefabMisiles: {fileID: 0}
@@ -577,10 +577,10 @@ MonoBehaviour:
   spawner3: {fileID: 1433417982}
   spawner4: {fileID: 1596656123}
   Spawnermisil: {fileID: 0}
-  speed: 30
-  xDirection: 5
-  yDirection: 5
-  timeTiCreate: 10
+  speed: 100
+  xDirection: 10
+  yDirection: 10
+  timeTiCreate: 2.5
   currentTimetuCreate: 0
 --- !u!54 &880561314
 Rigidbody:
@@ -628,8 +628,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 5460.8257, y: 6942.4775, z: 2346.2537}
-  m_Center: {x: -0.00024414068, y: 2.8876457e-11, z: 2.1597411e-11}
+  m_Size: {x: 845, y: 4641, z: 2346.2537}
+  m_Center: {x: -2091, y: 2.8876457e-11, z: 2.1597411e-11}
 --- !u!1 &998792412
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 1.5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -1168,8 +1168,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabEnemy: {fileID: 1225181535845473846, guid: b91418e5f0824624d90721034c9f8767,
     type: 3}
-  minZposition: -200
-  maxZposition: -200
+  minZposition: -100
+  maxZposition: -100
   minXposition: -22232
   maxXposition: -20953
   minYposition: -73
@@ -1361,7 +1361,7 @@ GameObject:
   - component: {fileID: 2055999662}
   m_Layer: 0
   m_Name: Vacio
-  m_TagString: Vacio
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1396,7 +1396,7 @@ Transform:
   m_GameObject: {fileID: 2055999661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -21509.23, y: 187.32977, z: -1891}
+  m_LocalPosition: {x: -21509.23, y: 187.32977, z: -1260}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1584,6 +1584,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2585316528814878505, guid: 3dff49a5fae82ca4db8558ba63299a85,
+        type: 3}
+      propertyPath: speedz.z
+      value: -50
+      objectReference: {fileID: 0}
     - target: {fileID: 4993982438606209231, guid: 3dff49a5fae82ca4db8558ba63299a85,
         type: 3}
       propertyPath: m_Name
@@ -1612,11 +1617,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: avion de enemigo
       objectReference: {fileID: 0}
-    - target: {fileID: 1225181535845473846, guid: b91418e5f0824624d90721034c9f8767,
-        type: 3}
-      propertyPath: m_TagString
-      value: enemigo
-      objectReference: {fileID: 0}
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1630,7 +1630,7 @@ PrefabInstance:
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -296
+      value: -342
       objectReference: {fileID: 0}
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}

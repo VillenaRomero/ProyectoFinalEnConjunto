@@ -7,6 +7,7 @@ public class Bala : MonoBehaviour
     private Rigidbody rigibody;
     public Vector3 speedz;
     public string nametag;
+    public string nametag2;
     private void Awake()
     {
         rigibody = GetComponent<Rigidbody>();
@@ -18,6 +19,10 @@ public class Bala : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == nametag)
+        {
+            Destroy(this.gameObject);
+        }
+        if (collision.gameObject.tag == nametag2)
         {
             Destroy(this.gameObject);
         }

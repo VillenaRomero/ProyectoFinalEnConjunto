@@ -120,8 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: {x: 0, y: 0, z: 40}
+  speedz: {x: 0, y: 0, z: 1000}
   nametag: enemigo
+  nametag2: Balasenemigas
 --- !u!54 &584874442956968992
 Rigidbody:
   m_ObjectHideFlags: 0

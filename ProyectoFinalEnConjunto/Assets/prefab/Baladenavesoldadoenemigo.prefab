@@ -115,7 +115,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4993982438606209231}
   serializedVersion: 4
-  m_Mass: 0.0000001
+  m_Mass: 10
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -146,5 +146,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: {x: 0, y: 0, z: -30}
+  speedz: {x: 0, y: 0, z: -100}
   nametag: nave
+  nametag2: 
