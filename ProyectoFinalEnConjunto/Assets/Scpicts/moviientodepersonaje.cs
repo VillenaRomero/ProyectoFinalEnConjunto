@@ -10,6 +10,9 @@ public class moviientodepersonaje : MonoBehaviour
     private Rigidbody rb;
     public float speed = 100f;
     public Vector2 sensitivity;
+    public float timeTiCreate = 30;
+    public float currentTimetuCreate;
+    public string nivel;
 
     void Start()
     {
@@ -18,6 +21,11 @@ public class moviientodepersonaje : MonoBehaviour
     private void Update()
     {
         UpdateCamera();
+        currentTimetuCreate = currentTimetuCreate + Time.deltaTime;
+        if (currentTimetuCreate >= timeTiCreate)
+        {
+            SceneManager.LoadScene(nivel);
+        }
     }
     private void UpdateCamera() {
         float hor = Input.GetAxis("Mouse X");
@@ -41,7 +49,7 @@ public class moviientodepersonaje : MonoBehaviour
     {
         if (collision.gameObject.tag == "Misiles") {
             
-            life = life - 3;
+            life = life - 1;
             
             if (life < 0)
             {

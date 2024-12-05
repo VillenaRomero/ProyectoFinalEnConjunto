@@ -5,25 +5,18 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     private Rigidbody rigibody;
-    public float fuerzaImpulso = 10f; // Fuerza del impulso inicial
+    public Vector3 speedz;
     public string nametag;
     public string nametag2;
-    private Vector3 velocidadActual; // Velocidad actual de la bala
 
     private void Awake()
     {
         rigibody = GetComponent<Rigidbody>();
     }
 
-    private void Start()
-    {
-        // Aplicar el impulso inicial
-        rigibody.AddForce(transform.forward * fuerzaImpulso, ForceMode.Impulse);
-    }
     private void FixedUpdate()
     {
-        // Actualizar la velocidad actual
-        velocidadActual = rigibody.velocity;
+        rigibody.velocity = speedz;
     }
     public void OnCollisionEnter(Collision collision)
     {

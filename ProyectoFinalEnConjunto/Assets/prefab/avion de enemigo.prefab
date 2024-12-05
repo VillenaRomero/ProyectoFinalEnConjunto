@@ -151,7 +151,8 @@ MonoBehaviour:
   prefabBullet: {fileID: 4993982438606209231, guid: 3dff49a5fae82ca4db8558ba63299a85,
     type: 3}
   spawner: {fileID: 2754994162419020304}
-  speedz: 40
+  velocidadInicial: 20
+  aceleracion: 10
   timeTiCreate: 3
   currentTimetuCreate: 0
 --- !u!1 &5902482552665744552

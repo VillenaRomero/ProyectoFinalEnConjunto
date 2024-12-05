@@ -148,3 +148,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedz: {x: 0, y: -600, z: 0}
   nametag: Vacio
+  nametag2: nave

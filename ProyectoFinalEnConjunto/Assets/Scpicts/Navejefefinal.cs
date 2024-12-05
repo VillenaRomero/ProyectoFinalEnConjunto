@@ -8,7 +8,6 @@ public class Navejefefinal : MonoBehaviour
     public int life = 100;
     private Rigidbody rigibody;
     public GameObject prefabBullet;
-    public GameObject PrefabMisiles;
     public Transform spawner1;
     public Transform spawner2;
     public Transform spawner3;
@@ -42,7 +41,6 @@ public class Navejefefinal : MonoBehaviour
         }
 
     }
-    // Update is called once per frame
     void FixedUpdate()
     {
         comTransform.position = new Vector3(comTransform.position.x + speed * xDirection * Time.deltaTime, comTransform.position.y + speed * yDirection * Time.deltaTime, 559.0f);
@@ -56,8 +54,6 @@ public class Navejefefinal : MonoBehaviour
         {
             xDirection = 1;
         }
-
-        // Limites en y
         if (comTransform.position.y >= 555)
         {
             yDirection = -1;
@@ -92,12 +88,6 @@ public class Navejefefinal : MonoBehaviour
         bullet.transform.position = spawner4.position;
         bullet.transform.rotation = transform.rotation;
     }
-    private void ShootMisil()
-    {
-        GameObject misil = Instantiate(PrefabMisiles);
-        misil.transform.position = Spawnermisil.position;
-        misil.transform.rotation = transform.rotation;
-    }
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bala")
@@ -110,12 +100,6 @@ public class Navejefefinal : MonoBehaviour
                 player.OnEnemyDestroyed();
             }
         }
-        /*if (collision.gameObject.tag== "misildeljugador"){
-         life = life - 10;
-
-         }
-         
-         */
     }
 
 }
