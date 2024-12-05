@@ -21,6 +21,8 @@ public class Navejefefinal : MonoBehaviour
 
     public float timeTiCreate = 5;
     public float currentTimetuCreate;
+
+    public movimientodeNave player;
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
@@ -105,11 +107,8 @@ public class Navejefefinal : MonoBehaviour
             if (life < 0)
             {
                 Destroy(this.gameObject);
+                player.OnEnemyDestroyed();
             }
-        }
-        if (collision.gameObject.tag == "vacio")
-        {
-            Destroy(this.gameObject);
         }
         /*if (collision.gameObject.tag== "misildeljugador"){
          life = life - 10;

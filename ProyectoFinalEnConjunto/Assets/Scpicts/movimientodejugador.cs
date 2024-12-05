@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using static Cinemachine.DocumentationSortingAttribute;
 
 public class movimientodeNave : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class movimientodeNave : MonoBehaviour
     public float speed = 100f;
     public GameObject bulletprefab;
     public Transform spawner;
+    public string nivel;
 
     void Start()
     {
@@ -32,6 +34,12 @@ public class movimientodeNave : MonoBehaviour
             bullet.transform.rotation = transform.rotation;
         }
     }
+
+    public void OnEnemyDestroyed()
+    {
+        SceneManager.LoadScene(nivel);
+    }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Misiles")

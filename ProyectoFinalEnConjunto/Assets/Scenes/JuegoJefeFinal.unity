@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027353407, g: 0.0043564686, b: 0.035101447, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027353282, g: 0.004356442, b: 0.035101265, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -161,6 +161,7 @@ MonoBehaviour:
   bulletprefab: {fileID: 4993982438606209231, guid: 35b7655fdd096bd46a0c5829176cfa68,
     type: 3}
   spawner: {fileID: 2045069622}
+  nivel: Victoria
 --- !u!54 &149510784
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -578,9 +579,9 @@ MonoBehaviour:
   spawner4: {fileID: 1596656123}
   Spawnermisil: {fileID: 0}
   speed: 100
-  xDirection: 10
-  yDirection: 10
-  timeTiCreate: 2.5
+  xDirection: 80
+  yDirection: 80
+  timeTiCreate: 1
   currentTimetuCreate: 0
 --- !u!54 &880561314
 Rigidbody:
@@ -1630,7 +1631,7 @@ PrefabInstance:
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -342
+      value: -106
       objectReference: {fileID: 0}
     - target: {fileID: 3314019170018295724, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
