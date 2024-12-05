@@ -10,36 +10,44 @@ public class MovimientodeNaveenemiga : MonoBehaviour
     private Rigidbody rigibody;
     public GameObject prefabBullet;
     public Transform spawner;
-    public float speedz;
+    public float velocidadInicial = 5f;
+    public float aceleracion = 1f;
 
     public float timeTiCreate = 5;
     public float currentTimetuCreate;
+
+    private float velocidadActual;
+
     void Start()
     {
         rigibody = GetComponent<Rigidbody>();
+        velocidadActual = velocidadInicial;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        currentTimetuCreate = currentTimetuCreate + Time.deltaTime;
+        currentTimetuCreate += Time.deltaTime;
         if (currentTimetuCreate >= timeTiCreate)
         {
             ShootBullet1();
-
             currentTimetuCreate = 0;
         }
     }
+
     private void ShootBullet1()
     {
         GameObject bullet = Instantiate(prefabBullet);
         bullet.transform.position = spawner.position;
         bullet.transform.rotation = transform.rotation;
     }
+
     private void FixedUpdate()
     {
-        rigibody.velocity = new Vector3(0,0,-speedz);
+        velocidadActual += aceleracion * Time.fixedDeltaTime;
+
+        rigibody.velocity = new Vector3(0, 0, -velocidadActual);
     }
+
     public void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Bala")
