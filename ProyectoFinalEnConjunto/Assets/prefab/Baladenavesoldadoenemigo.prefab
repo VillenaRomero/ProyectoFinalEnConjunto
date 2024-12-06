@@ -265,6 +265,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b28a505a7171874ca5ece7b961ccd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedz: {x: 0, y: 0, z: -100}
+  initialSpeed: {x: 0, y: 0, z: -100}
+  acceleration: {x: 0, y: 0, z: -100}
   nametag: nave
   nametag2: 

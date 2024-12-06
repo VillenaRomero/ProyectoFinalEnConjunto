@@ -5,18 +5,20 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     private Rigidbody rigibody;
-    public Vector3 speedz;
+    public Vector3 initialSpeed;
+    public Vector3 acceleration; 
     public string nametag;
     public string nametag2;
 
     private void Awake()
     {
         rigibody = GetComponent<Rigidbody>();
+        rigibody.velocity = initialSpeed;
     }
 
     private void FixedUpdate()
     {
-        rigibody.velocity = speedz;
+        rigibody.velocity += acceleration * Time.fixedDeltaTime;
     }
     public void OnCollisionEnter(Collision collision)
     {
