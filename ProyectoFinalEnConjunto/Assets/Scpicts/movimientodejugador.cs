@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using static Cinemachine.DocumentationSortingAttribute;
 
 public class movimientodeNave : MonoBehaviour
 {
@@ -34,24 +33,13 @@ public class movimientodeNave : MonoBehaviour
             bullet.transform.rotation = transform.rotation;
         }
     }
-
     public void OnEnemyDestroyed()
     {
         SceneManager.LoadScene(nivel);
     }
-
     public void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Misiles")
-        {
-
-            life = life - 5;
-
-            if (life < 0)
-            {
-                SceneManager.LoadScene("derrota");
-            }
-        }
+    { 
+ 
         if (collision.gameObject.tag == "Balasenemigas")
         {
 
@@ -73,4 +61,5 @@ public class movimientodeNave : MonoBehaviour
             }
         }
     }
+
 }

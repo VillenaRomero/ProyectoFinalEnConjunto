@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0013809762, g: 0.0010453092, b: 0.0032765106, a: 1}
+  m_IndirectSpecularColor: {r: 0.001380973, g: 0.0010453063, b: 0.003276506, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8665,7 +8665,7 @@ AudioSource:
   m_GameObject: {fileID: 682889657}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -8959,7 +8959,7 @@ GameObject:
   - component: {fileID: 707165148}
   m_Layer: 0
   m_Name: Colliders
-  m_TagString: Untagged
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13078,7 +13078,7 @@ GameObject:
   - component: {fileID: 1011180643}
   m_Layer: 0
   m_Name: Colliders (1)
-  m_TagString: Untagged
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13279,7 +13279,7 @@ GameObject:
   - component: {fileID: 1019361276}
   m_Layer: 0
   m_Name: Colliders (3)
-  m_TagString: Untagged
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14260,7 +14260,7 @@ AudioSource:
   m_GameObject: {fileID: 1090541042}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -16224,7 +16224,7 @@ AudioSource:
   m_GameObject: {fileID: 1227996594}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -19211,7 +19211,7 @@ AudioSource:
   m_GameObject: {fileID: 1429490136}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -21238,7 +21238,7 @@ AudioSource:
   m_GameObject: {fileID: 1572348968}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -23932,7 +23932,7 @@ GameObject:
   - component: {fileID: 1779208112}
   m_Layer: 0
   m_Name: Colliders (2)
-  m_TagString: Untagged
+  m_TagString: vacio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25755,7 +25755,7 @@ AudioSource:
   m_GameObject: {fileID: 1970557840}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -37699,7 +37699,7 @@ AudioSource:
   m_GameObject: {fileID: 2046243766}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -39373,7 +39373,7 @@ PrefabInstance:
     - target: {fileID: 1230386099757067209, guid: c6896e861d9037d4aad017c6388aa186,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 909
+      value: 900.4
       objectReference: {fileID: 0}
     - target: {fileID: 1230386099757067209, guid: c6896e861d9037d4aad017c6388aa186,
         type: 3}
@@ -39417,8 +39417,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6685807408916747565, guid: c6896e861d9037d4aad017c6388aa186,
         type: 3}
-      propertyPath: nametag2
-      value: nave
+      propertyPath: acceleration.y
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6685807408916747565, guid: c6896e861d9037d4aad017c6388aa186,
+        type: 3}
+      propertyPath: initialSpeed.y
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: 8990938140438171745, guid: c6896e861d9037d4aad017c6388aa186,
         type: 3}

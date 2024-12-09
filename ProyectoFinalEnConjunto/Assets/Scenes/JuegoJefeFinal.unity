@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0027353407, g: 0.0043564686, b: 0.035101447, a: 1}
+  m_IndirectSpecularColor: {r: 0.0027353282, g: 0.004356442, b: 0.035101265, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -222,7 +222,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149510782}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 0.0000001
   m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -651,7 +651,7 @@ Transform:
   m_GameObject: {fileID: 880561309}
   serializedVersion: 2
   m_LocalRotation: {x: -0.4973898, y: -0.5025968, z: -0.5025967, w: 0.49738976}
-  m_LocalPosition: {x: -21617, y: 282, z: 559}
+  m_LocalPosition: {x: -20806, y: 690, z: 569}
   m_LocalScale: {x: 0.20635505, y: 0.20635505, z: 0.20635505}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -685,7 +685,7 @@ MonoBehaviour:
   Spawnermisil: {fileID: 0}
   speed: 100
   xDirection: 150
-  yDirection: 150
+  yDirection: 1
   timeTiCreate: 1
   currentTimetuCreate: 0
   player: {fileID: 149510783}
@@ -1206,7 +1206,7 @@ GameObject:
   - component: {fileID: 1699456802}
   - component: {fileID: 1699456803}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Musica
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1221,7 +1221,7 @@ AudioSource:
   m_GameObject: {fileID: 1699456799}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 2540b9840a1113146985040a1d9b2363,
+  OutputAudioMixerGroup: {fileID: -1910603837169844033, guid: 2540b9840a1113146985040a1d9b2363,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
@@ -1337,7 +1337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audiosource: {fileID: 1699456800}
-  music: {fileID: 11400000, guid: 0871dac84d47d394494ead930a50a330, type: 2}
+  music: {fileID: 11400000, guid: c915d4dc85174194fbe77f045a9db96f, type: 2}
 --- !u!65 &1699456803
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1968,7 +1968,7 @@ PrefabInstance:
     - target: {fileID: 8904428010550529331, guid: b91418e5f0824624d90721034c9f8767,
         type: 3}
       propertyPath: velocidadInicial
-      value: 25
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
